@@ -1,0 +1,1 @@
+{"name":"Local: L2","url":"d:\\Rafi\\Problem Solving\\Two pointers and sliding window\\L2.Max_point_can_obtail.cpp","tests":[{"id":1753614128633,"input":"10 4\n5 7 3 5 2 1 0 9 8 4","output":"26"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Rafi\\Problem Solving\\Two pointers and sliding window\\L2.Max_point_can_obtail.cpp","group":"local","local":true}
