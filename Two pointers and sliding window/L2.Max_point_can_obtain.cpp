@@ -1,4 +1,6 @@
 //maximum point you can obtain from k cards
+// https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/
+
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
