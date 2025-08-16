@@ -5,7 +5,7 @@ using namespace std;
 #define int long long
 #define pb push_back
 #define all(x) x.begin(), x.end()
-#define Yes cout << "YES" << endl
+#define YES cout << "YES" << endl
 #define NO cout << "NO" << endl
 #define el cout << endl
 /*-------------------------End of Macros-------------------------*/
@@ -13,25 +13,32 @@ using namespace std;
 const int mod = 1e9+7;
 void solution()
 {
-    int n; cin>>n;
-    vector<int> v(n);
-    int mx = -1, sum=0;
-    for(int i=0; i<n; i++){
-        cin>>v[i];
-        mx = max(mx, v[i]);
-        sum+=v[i];
+    int a, b, x, y; cin>>a>>b>>x>>y;
+    int ans =0;
+    if(b<a-1 || (b==a-1 && a%2==0)) {
+        cout<<-1<<endl;
     }
-    if(sum-mx<mx) cout<<2*mx<<endl;
-    else cout<<sum<<endl;
+    else if(b==a-1){
+        cout<<y<<endl;
+    }
+    else if(b>=a){
+        while(a!=b){
+            if(!(a%2)){
+                ans += min(x, y);
+            }
+            else ans+=x;
+            a++;
+        }
+        cout<<ans<<endl;
+    }
 }
-
 signed main()
 {
     fastIO();
     int t;
-    // cin >> t;
-    // while (t--)
-    // {
+    cin >> t;
+    while (t--)
+    {
         solution();
-    // }
+    }
 }
