@@ -4,7 +4,7 @@ using namespace std;
 #define endl '\n'
 #define int long long
 #define pb push_back
-#define all(x) x.rbegin(), x.rend()
+#define all(x) x.begin(), x.end()
 #define YES cout << "YES" << endl
 #define NO cout << "NO" << endl
 #define el cout << endl
@@ -13,19 +13,22 @@ using namespace std;
 const int mod = 1e9+7;
 void solution()
 {
-    int n, k;
-    cin>>n>>k;
-    string s; cin>>s;
-    string ss = s;
-    sort(all(ss));
-    int sz = s.size();
-    set<char> st;
-    string sss = s;
-    reverse(all(sss));
-    auto mn_it = min_element(all(s));
-    auto mx_it = max_element(all(s));
-    if(sss>s || (k>=1 && *mn_it != *mx_it)) YES;
-    else NO;
+    int n; cin>>n;
+    vector<int> v(n);
+    for(int i=0; i<n; i++){
+        cin>>v[i];
+    }
+    for(int i=0; i<n; i++){
+        int mx = max(i-0, n-1-i);
+        // cout<<mx<<" ";
+        if(mx*2 >= v[i]) {
+            NO;
+            return;
+        }
+        
+    }
+    YES;
+    
 }
 
 signed main()
